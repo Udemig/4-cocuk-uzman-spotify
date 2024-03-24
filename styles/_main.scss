@@ -1,0 +1,109 @@
+main {
+  width: 100%;
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 10px;
+    @media (max-width: 870px) {
+      justify-content: center;
+      ul {
+        display: none !important;
+      }
+    }
+    form {
+      display: flex;
+      input {
+        padding: 6px 12px;
+        border: none;
+        border-radius: 5px 0 0 5px;
+        outline: none;
+      }
+      button {
+        background: #1db954;
+        height: 100%;
+        padding: 0 25px;
+        border: none;
+        outline: none;
+        color: white;
+        cursor: pointer;
+        border-radius: 0 5px 5px 0;
+        transition: all 0.3s;
+        &:hover {
+          background-color: #127434;
+        }
+      }
+    }
+    ul {
+      display: flex;
+      list-style: none;
+      align-items: center;
+
+      li {
+        padding: 6px 12px;
+        cursor: pointer;
+        border-radius: 10px;
+        transition: all 0.3s;
+
+        &:hover {
+          background: rgb(60, 60, 60);
+        }
+      }
+    }
+  }
+  .songs {
+    background: #2a2a2a;
+    height: 100%;
+    #title {
+      padding: 20px;
+    }
+    #list {
+      padding: 0 20px;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      overflow-y: auto;
+      gap: 20px;
+      @media (max-width: 768px) {
+        justify-content: center;
+        gap: 50px;
+      }
+      .card {
+        width: 200px;
+        padding: 15px;
+        background: #181818;
+        cursor: pointer;
+        border-radius: 6px;
+        &:hover .play {
+          opacity: 1;
+          bottom: 20px;
+        }
+        figure {
+          position: relative;
+          img {
+            width: 100%;
+            border-radius: 6px;
+            margin-bottom: 10px;
+          }
+          .play {
+            position: absolute;
+            right: 10px;
+            background-color: #1db954;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            bottom: -20px;
+            opacity: 0;
+            transition: all 0.3s;
+            &:hover {
+              background: #127434;
+              scale: 0.9;
+            }
+          }
+        }
+      }
+    }
+  }
+}

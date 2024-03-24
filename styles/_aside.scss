@@ -1,0 +1,41 @@
+aside {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px 15px;
+  a {
+    display: flex;
+    padding: 20px 10px;
+    gap: 5px;
+    border-radius: 10px;
+    white-space: nowrap;
+    transition: all 0.3s;
+    &:hover {
+      background-color: rgb(32, 32, 32);
+    }
+    @media (max-width: 870px) {
+      span {
+        display: none;
+      }
+      i {
+        font-size: 20px;
+      }
+    }
+  }
+  #logo {
+    display: none;
+    width: 40px;
+  }
+  img {
+    max-width: 130px;
+    object-fit: contain;
+  }
+  @media (max-width: 870px) {
+    #text-logo {
+      display: none;
+    }
+    #logo {
+      display: block;
+    }
+  }
+}
